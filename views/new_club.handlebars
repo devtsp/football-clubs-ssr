@@ -1,0 +1,180 @@
+<div class='mb-4 d-flex justify-content-evenly'>
+	<a href='/' class='text-black'>New Club</a>
+	<a href='clubs' class='text-decoration-none text-black'>View Clubs</a>
+</div>
+
+<form action='/' method='POST' enctype='multipart/form-data' class='mb-0'>
+	<h5 class='text-center m-0'>Create Club</h5>
+	<div class='my-3'>
+		<h6 for='crest' class='mb-2 text-black-50 text-center'>Upload a personal
+			crest</h6>
+		<label
+			for='crest'
+			class='form-label my-0 text-black-50 visually-hidden'
+		>Crest Img File</label>
+		<input
+			type='file'
+			name='crest'
+			id='crest'
+			class='form-control form-control-sm my-1'
+			required
+		/>
+	</div>
+	<h6 for='crest' class='mb-2 text-black-50 text-center'>Select main colors of
+		the Club</h6>
+	<div class='mb-3 d-flex justify-content-center align-items-center'>
+		<div class='me-3'>
+			<label
+				for='color-1'
+				class='form-label my-0 text-black-50 visually-hidden'
+			>color 1</label>
+			<input
+				type='color'
+				name='color-1'
+				id='color-1'
+				class='form-control form-control-color'
+				required
+			/>
+		</div>
+		<div>
+			<label
+				for='color-2'
+				class='form-label my-0 text-black-50 visually-hidden'
+			>color 2</label>
+			<input
+				type='color'
+				name='color-2'
+				id='color-2'
+				class='form-control form-control-color'
+				required
+			/>
+		</div>
+	</div>
+	<h6 class='my-2 text-center m-0 text-black-50 text-center'>Fill your Club
+		Information</h6>
+	<div>
+		<label
+			for='name'
+			class='form-label my-0 text-black-50 ps-1 visually-hidden'
+		>Name</label>
+		<input
+			type='text'
+			name='name'
+			id='name'
+			class='form-control form-control-sm my-1'
+			placeholder='name'
+			minlength='6'
+			maxlength='20'
+			required
+		/>
+	</div>
+	<div>
+		<label
+			for='name'
+			class='form-label my-0 text-black-50 ps-1 visually-hidden'
+		>tla</label>
+		<input
+			type='text'
+			name='tla'
+			id='tla'
+			class='form-control form-control-sm my-1'
+			placeholder='three-letter acronym'
+			minlength='3'
+			maxlength='3'
+			required
+		/>
+	</div>
+	<div>
+		<label
+			for='area'
+			class='form-label my-0 text-black-50 ps-1 visually-hidden'
+		>Area</label>
+		<input
+			type='text'
+			name='area'
+			id='area'
+			class='form-control form-control-sm my-1'
+			placeholder='area'
+			required
+		/>
+	</div>
+	<div>
+		<label
+			for='owner'
+			class='form-label my-0 text-black-50 ps-1 visually-hidden'
+		>Adress</label>
+		<input
+			type='text'
+			name='adress'
+			id='adress'
+			class='form-control form-control-sm my-1'
+			placeholder='adress'
+			required
+		/>
+	</div>
+	<div>
+		<label
+			for='phone'
+			class='form-label my-0 text-black-50 ps-1 visually-hidden'
+		>Phone</label>
+		<input
+			type='text'
+			name='phone'
+			id='phone'
+			class='form-control form-control-sm my-1'
+			placeholder='phone'
+			minlength='8'
+			required
+		/>
+	</div>
+	<div>
+		<label
+			for='email'
+			class='form-label my-0 text-black-50 ps-1 visually-hidden'
+		>Email</label>
+		<input
+			type='email'
+			name='email'
+			id='email'
+			class='form-control form-control-sm my-1'
+			placeholder='email'
+			required
+		/>
+	</div>
+	<div>
+		<label
+			for='founded'
+			class='form-label my-0 text-black-50 ps-1 visually-hidden'
+		>Founded</label>
+		<input
+			type='text'
+			name='founded'
+			id='founded'
+			class='form-control form-control-sm my-1'
+			placeholder='year founded'
+			minlength='4'
+			maxlength='4'
+			required
+		/>
+	</div>
+	<div>
+		<label
+			for='venue'
+			class='form-label my-0 text-black-50 ps-1 visually-hidden'
+		>Venue</label>
+		<input
+			type='text'
+			name='venue'
+			id='venue'
+			class='form-control form-control-sm my-1'
+			placeholder='venue'
+			minlength='3'
+			required
+		/>
+	</div>
+	<div class='d-flex justify-content-center mt-2'>
+		<button type='submit' class='btn btn-sm btn-success px-4'>
+			Send
+		</button>
+	</div>
+</form>

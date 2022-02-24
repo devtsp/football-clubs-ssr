@@ -1,0 +1,48 @@
+<div class='mb-4 d-flex justify-content-evenly'>
+	<a href='/' class='text-decoration-none text-black'>New Club</a>
+	<a href='clubs' class='text-black'>View Clubs</a>
+</div>
+
+{{#if data.clubs}}
+	<ul
+		id='club-list'
+		class='list-unstyled m-0 d-flex flex-column align-items-stretch'
+	>
+		{{#each data.clubs as |club|}}
+			<li id='{{club.id}}' class='mb-2 text-center'>
+				<ul class='list-unstyled d-flex align-items-center'>
+					<li
+						id='crest-mini'
+						class='d-flex align-items-center justify-content-center'
+					>
+						<img class='club-crest' src='/uploads/img/{{club.crest}}' />
+					</li>
+					<li class='d-flex align-items-center justify-content-start flex-fill'>
+						<h6 class='fs-6 lh-1 m-0 ps-3'>
+							<a
+								id='club-details-link'
+								href='/clubs/{{club.id}}'
+								class='text-black text-decoration-none'
+							>{{club.name}}</a>
+						</h6>
+					</li>
+					<li>
+						<a
+							id='delete-club'
+							class='text-black'
+							href='clubs/delete/{{club.id}}'
+						>
+							<i class='bi bi-trash3 px-2'></i>
+						</a>
+					</li>
+				</ul>
+			</li>
+		{{/each}}
+	</ul>
+{{else}}
+	<h6 class='text-center my-4 fw-normal'>No clubs to display yet.
+		<strong>
+			<a href='/' class='text-danger'>Create One!</a>
+		</strong>
+	</h6>
+{{/if}}

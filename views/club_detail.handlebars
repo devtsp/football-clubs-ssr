@@ -1,0 +1,65 @@
+<div class='mb-4 d-flex justify-content-evenly'>
+	<a href='/' class='text-decoration-none text-black'>New Club</a>
+	<a href='/clubs' class='text-decoration-none text-black'>View Clubs</a>
+</div>
+
+<ul id='club-info' class='list-unstyled my-2'>
+	{{#with data}}
+
+		<li class='d-flex justify-content-center align-items-center'>
+			<div
+				id='crest-main'
+				class='d-flex justify-content-center align-items-center'
+			>
+				<img src='/uploads/img/{{club.crest}}' alt='{{club.name}}' />
+
+			</div>
+		</li>
+		<li class='d-flex align-items-center justify-content-center mt-4 mb-2'>
+			<h3 class='text-center p-0 m-0 me-3'>{{club.name}}</h3>
+			<a
+				id='club-edit-link'
+				href='/clubs/edit/{{club.id}}'
+				class='text-black-50 pt-1'
+			><i class='bi bi-pencil-square fs-5'></i></a>
+		</li>
+		<li
+			style='height: 5px;background-image: linear-gradient(to right, transparent, {{color1}} 20%, {{color1}} 50%, {{color2}} 50%, {{color2}} 80%, transparent);'
+		>
+		</li>
+		<div class='container'>
+			<li class='row d-flex justify-content-between py-2'>
+				<span class='text-black-50 col-4 text-start'>TLA </span>
+				<span class='col-8 text-start'>{{club.tla}}</span>
+			</li>
+			<li class='row d-flex justify-content-between py-2'>
+				<span class='text-black-50 col-4 text-start'>Area </span>
+				<span class='col-8 text-start'>{{club.area}}</span>
+			</li>
+			<li class='row d-flex justify-content-between py-2'>
+				<span class='text-black-50 col-4 text-start'>Adress </span>
+				<span class='col-8 text-start'>{{club.adress}}</span>
+			</li>
+			<li class='row d-flex justify-content-between py-2'>
+				<span class='text-black-50 col-4 text-start'>Phone </span>
+				<span class='col-8 text-start'>{{club.phone}}</span>
+			</li>
+			<li class='row d-flex justify-content-between py-2'>
+				<span class='text-black-50 col-4 text-start'>Email </span>
+				<span class='col-8 text-start'>{{club.email}}</span>
+			</li>
+			<li class='row d-flex justify-content-between py-2'>
+				<span class='text-black-50 col-4 text-start'>Founded </span>
+				<span class='col-8 text-start'>{{club.founded}}</span>
+			</li>
+			<li class='row d-flex justify-content-between py-2'>
+				<span class='text-black-50 col-4 text-start'>Venue </span>
+				<span class='col-8 text-start'>{{club.venue}}</span>
+			</li>
+			<li class='row d-flex justify-content-between py-2'>
+				<span class='text-black-50 col-4 text-start'>Last Updated </span>
+				<span class='col-8 text-start'>{{club.last-updated}}</span>
+			</li>
+		</div>
+	{{/with}}
+</ul>

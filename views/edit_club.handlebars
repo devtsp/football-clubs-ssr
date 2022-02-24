@@ -1,0 +1,185 @@
+<div class='mb-4 d-flex justify-content-evenly'>
+	<a href='/' class='text-decoration-none text-black'>New Club</a>
+	<a href='clubs' class='text-decoration-none text-black'>View Clubs</a>
+</div>
+
+{{#with data}}
+	<form
+		id='edit-form'
+		action='/clubs/edit/{{club.id}}'
+		method='POST'
+		class='mb-0'
+		enctype='multipart/form-data'
+	>
+		<h6 class='text-center mb-3'>Edit Club</h6>
+		<div class='row d-flex align-items-center'>
+			<label
+				for='crest'
+				class='col-4 form-label my-0 text-black-50'
+			>Crest</label>
+			<input
+				type='file'
+				name='crest'
+				id='crest'
+				class='col form-control form-control-sm my-1'
+			/>
+		</div>
+		<div class='row d-flex align-items-center'>
+			<label for='color-1' class='col-4 form-label my-0 text-black-50'>Color 1</label>
+			<div class='col p-0 d-flex align-items-center' style='height: 39px'>
+				<input
+					style='height: 30px'
+					type='color'
+					name='color1'
+					id='color-1'
+					class='form-control form-control-color edit-color'
+					value='{{color1}}'
+					required
+				/>
+			</div>
+		</div>
+		<div class='row d-flex align-items-center'>
+			<label for='color-2' class='col-4 form-label my-0 text-black-50'>Color 2</label>
+			<div class='col p-0 d-flex align-items-center' style='height: 39px'>
+				<input
+					style='height: 30px'
+					type='color'
+					name='color2'
+					id='color-2'
+					class='form-control form-control-color edit-color'
+					value='{{color2}}'
+					required
+				/>
+			</div>
+		</div>
+		<div class='container p-0'>
+			<div class='row d-flex align-items-center'>
+				<label
+					for='name'
+					class='form-label my-0 text-black-50 col-4'
+				>Name</label>
+				<input
+					type='text'
+					name='name'
+					id='name'
+					class='form-control form-control-sm my-1 col'
+					minlength='6'
+					maxlength='20'
+					value='{{club.name}}'
+					required
+				/>
+			</div>
+			<div class='row d-flex align-items-center'>
+				<label
+					for='name'
+					class='col-4 form-label my-0 text-black-50'
+				>TLA</label>
+				<input
+					type='text'
+					name='tla'
+					id='tla'
+					class='col form-control form-control-sm my-1'
+					minlength='3'
+					maxlength='3'
+					value='{{club.tla}}'
+					required
+				/>
+			</div>
+			<div class='row d-flex align-items-center'>
+				<label
+					for='area'
+					class='col-4 form-label my-0 text-black-50'
+				>Area</label>
+				<input
+					type='text'
+					name='area'
+					id='area'
+					class='col form-control form-control-sm my-1'
+					value='{{club.area}}'
+					required
+				/>
+			</div>
+			<div class='row d-flex align-items-center d-flex'>
+				<label
+					for='owner'
+					class='col-4 form-label my-0 text-black-50'
+				>Adress</label>
+				<input
+					type='text'
+					name='adress'
+					id='adress'
+					class='col form-control form-control-sm my-1'
+					value='{{club.adress}}'
+					required
+				/>
+			</div>
+			<div class='row d-flex align-items-center'>
+				<label
+					for='phone'
+					class='col-4 form-label my-0 text-black-50'
+				>Phone</label>
+				<input
+					type='text'
+					name='phone'
+					id='phone'
+					class='col form-control form-control-sm my-1'
+					minlength='8'
+					value='{{club.phone}}'
+					required
+				/>
+			</div>
+			<div class='row d-flex align-items-center'>
+				<label
+					for='email'
+					class='col-4 form-label my-0 text-black-50'
+				>Email</label>
+				<input
+					type='email'
+					name='email'
+					id='email'
+					class='col form-control form-control-sm my-1'
+					value='{{club.email}}'
+					required
+				/>
+			</div>
+			<div class='row d-flex align-items-center'>
+				<label
+					for='founded'
+					class='col-4 form-label my-0 text-black-50'
+				>Founded</label>
+				<input
+					type='text'
+					name='founded'
+					id='founded'
+					class='col form-control form-control-sm my-1'
+					placeholder='year founded'
+					minlength='4'
+					maxlength='4'
+					value='{{club.founded}}'
+					required
+				/>
+			</div>
+			<div class='row d-flex align-items-center'>
+				<label
+					for='venue'
+					class='col-4 form-label my-0 text-black-50'
+				>Venue</label>
+				<input
+					type='text'
+					name='venue'
+					id='venue'
+					class='col form-control form-control-sm my-1'
+					minlength='3'
+					value='{{club.venue}}'
+					required
+				/>
+			</div>
+		</div>
+		<div class='d-flex justify-content-center mt-2'>
+			<button type='submit' class='btn btn-sm btn-success px-4'>
+				Save
+			</button>
+		</div>
+	</form>
+
+{{/with}}
